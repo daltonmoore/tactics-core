@@ -1,0 +1,10 @@
+{
+    "name": "Daltonmoore.Tacticscore.Editor",
+    "references": [
+      "Daltonmoore.Tacticscore"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
+}

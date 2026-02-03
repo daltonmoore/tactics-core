@@ -1,0 +1,20 @@
+{
+    "name": "Daltonmoore.Tacticscore",
+    "rootNamespace": "",
+    "references": [
+        "GUID:2e1801594b170ac4a9be67d7e81b1144",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:d8b63aba1907145bea998dd612889d6b",
+        "GUID:de4e6084e6d474788bb8c799d6b461ec"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

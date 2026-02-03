@@ -1,0 +1,11 @@
+{
+    "name": "Daltonmoore.Tacticscore.Tests",
+    "references": [
+        "Daltonmoore.Tacticscore"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": []
+}
