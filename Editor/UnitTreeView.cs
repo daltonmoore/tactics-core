@@ -45,14 +45,16 @@ namespace TacticsCore.Editor
             treeView.columns["stats"].bindCell = (element, index) =>
             {
                 string temp = "";
+                // clear text of the label
+                (element as Label).text = temp;
+                
                 var item = treeView.GetItemDataForIndex<IUnitOrGroup>(index);
-                if (item == null || item.Stats == null) return;
+                if (item.Stats == null) return;
                 
                 foreach (Stat stat in item.Stats)
                 {
                     temp += $"{stat.type.ToString()}: {stat.value}\n";
                 }
-
                 (element as Label).text = temp;
             };
         }

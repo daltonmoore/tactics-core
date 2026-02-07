@@ -10,14 +10,14 @@ namespace TacticsCore.Units
         [SerializeField] private AnimationConfigSO animationConfig;
         [SerializeField] public GameObject deathPrefab;
 
-        protected UnitSO unitSO;
+        public new virtual UnitSO UnitSO { get; set; }
 
 
         protected override void Awake()
         {
             base.Awake();
             
-            unitSO = UnitSO as UnitSO;
+            UnitSO = base.UnitSO as UnitSO;
         }
     }
     

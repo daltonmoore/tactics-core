@@ -29,7 +29,7 @@ namespace TacticsCore.Editor
             }
         }
         
-        // Expresses planet data as a list of TreeViewItemData objects. Needed for TreeView and MultiColumnTreeView.
+        // Expresses unit data as a list of TreeViewItemData objects. Needed for TreeView and MultiColumnTreeView.
         protected IList<TreeViewItemData<IUnitOrGroup>> TreeRoots
         {
             get
@@ -38,13 +38,13 @@ namespace TacticsCore.Editor
                 var roots = new List<TreeViewItemData<IUnitOrGroup>>(unitDatabase.unitGroups.Count);
                 foreach (var group in unitDatabase.unitGroups)
                 {
-                    var planetsInGroup = new List<TreeViewItemData<IUnitOrGroup>>(group.units.Count);
+                    var unitsInGroup = new List<TreeViewItemData<IUnitOrGroup>>(group.units.Count);
                     foreach (var unit in group.units)
                     {
-                        planetsInGroup.Add(new TreeViewItemData<IUnitOrGroup>(id++, unit));
+                        unitsInGroup.Add(new TreeViewItemData<IUnitOrGroup>(id++, unit));
                     }
 
-                    roots.Add(new TreeViewItemData<IUnitOrGroup>(id++, group, planetsInGroup));
+                    roots.Add(new TreeViewItemData<IUnitOrGroup>(id++, group, unitsInGroup));
                 }
                 return roots;
             }
@@ -79,12 +79,11 @@ namespace TacticsCore.Editor
         [SerializeField]
         public List<Unit> units;
 
-        public UnitGroup(string name, List<Unit> units, Sprite icon, List<Stat> stats)
+        public UnitGroup(string name, List<Unit> units, Sprite icon)
         {
             this.Name = name;
             this.units = units;
             this.Icon = icon;
-            this.Stats = stats;
         }
     }
     
@@ -106,6 +105,12 @@ namespace TacticsCore.Editor
     {
         [SerializeField] public StatType type;
         [SerializeField] public int value;
+        
+        public Stat(StatType type, int value)
+        {
+            this.type = type;
+            this.value = value;
+        }
     }
 
     [Serializable]
