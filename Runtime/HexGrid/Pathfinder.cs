@@ -57,16 +57,16 @@ namespace TacticsCore.HexGrid
                         // Check if the tile is not null (i.e., a tile actually exists in that cell)
                         if (tile != null)
                         {
-                            Debug.Log("Found tile: " + tile.name + " at position: " + tilePosition);
+                            // Debug.Log("Found tile: " + tile.name + " at position: " + tilePosition);
 
                             // Optional: Get the world position of the tile center
                             // Vector3 worldPosition = tilemap.GetCellCenterWorld(tilePosition);
                         }
                         else
                         {
-                            Debug.Log("No tile found at position: " + (x, y));
+                            // Debug.Log("No tile found at position: " + (x, y));
                             var pos = hexTilemap.CellToWorld(tilePosition);
-                            Debug.Log($"World pos: {pos}");
+                            // Debug.Log($"World pos: {pos}");
                             unwalkableTileWorldPositions.Add(pos);
                         }
                     }

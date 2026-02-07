@@ -5,15 +5,12 @@ using Slider = UnityEngine.UI.Slider;
 
 namespace TacticsCore.Units
 {
-    public abstract class AbstractUnit : AbstractCommandable, IDamageable
+    public abstract class AbstractUnit : AbstractCommandable
     {
         [SerializeField] private AnimationConfigSO animationConfig;
         [SerializeField] public GameObject deathPrefab;
 
         protected UnitSO unitSO;
-
-        private float _health;
-        private float _healthMax;
 
 
         protected override void Awake()
@@ -21,23 +18,6 @@ namespace TacticsCore.Units
             base.Awake();
             
             unitSO = UnitSO as UnitSO;
-            _healthMax = unitSO.Health;
-            _health = unitSO.Health;
-            
-        }
-
-        [field:SerializeField]
-        public Slider HealthBar { get; set; }
-
-        public void TakeDamage(int damage)
-        {
-            _health -= damage;
-            HealthBar.value = _health/_healthMax;
-
-            if (_health <= 0)
-            {
-                Instantiate(deathPrefab, transform);
-            }
         }
     }
     

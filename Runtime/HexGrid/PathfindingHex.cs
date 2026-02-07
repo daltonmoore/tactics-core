@@ -106,51 +106,15 @@ namespace TacticsCore.HexGrid
             {
                 for (int y = 0; y < Grid.height; y++)
                 {
-                    SpriteRenderer spriteRenderer = CreateDebugSquare(cellSize, x, y, debugWalkableSquares, "W");
-                    _debugWalkableArray[x, y] = spriteRenderer;
+                    // This is useful for debugging the pathfinding but is way too much clutter for typical debugging.
 
-                    spriteRenderer = CreateDebugSquare(cellSize, x, y, debugTerrainSquares, "T");
-                    _debugTerrainArray[x, y] = spriteRenderer;
+                    // SpriteRenderer spriteRenderer = CreateDebugSquare(cellSize, x, y, debugWalkableSquares, "W");
+                    // _debugWalkableArray[x, y] = spriteRenderer;
+                    //
+                    // spriteRenderer = CreateDebugSquare(cellSize, x, y, debugTerrainSquares, "T");
+                    // _debugTerrainArray[x, y] = spriteRenderer;
 
-                    _debugNodeCostArray[x, y].gCost =
-                        Utils.CreateWorldText(
-                            "g: 0",
-                            debugHexVisuals,
-                            GetRandomPointInHex(
-                                Grid.GetWorldPosition(x, y),
-                                cellSize / INNER_HEX_CIRCLE_RADIUS_DIVISOR),
-                            Mathf.RoundToInt(cellSize),
-                            Color.black,
-                            TextAlignmentOptions.Center,
-                            0,
-                            Constants.PlayerSortingLayer
-                        );
-                    _debugNodeCostArray[x, y].hCost =
-                        Utils.CreateWorldText(
-                            "h: 0",
-                            debugHexVisuals,
-                            GetRandomPointInHex(
-                                Grid.GetWorldPosition(x, y),
-                                cellSize / INNER_HEX_CIRCLE_RADIUS_DIVISOR),
-                            Mathf.RoundToInt(cellSize),
-                            Color.black,
-                            TextAlignmentOptions.Center,
-                            0,
-                            Constants.PlayerSortingLayer
-                        );
-                    _debugNodeCostArray[x, y].fCost =
-                        Utils.CreateWorldText(
-                            "f: 0",
-                            debugHexVisuals,
-                            GetRandomPointInHex(
-                                Grid.GetWorldPosition(x, y),
-                                cellSize / INNER_HEX_CIRCLE_RADIUS_DIVISOR),
-                            Mathf.RoundToInt(cellSize),
-                            Color.black,
-                            TextAlignmentOptions.Center,
-                            0,
-                            Constants.PlayerSortingLayer
-                        );
+                    // CreateDebugNodeCosts(cellSize, x, y, debugHexVisuals);
 
                     Transform visualTransform =
                         GameObject.Instantiate(pfHex, Grid.GetWorldPosition(x, y), Quaternion.identity);
@@ -161,6 +125,49 @@ namespace TacticsCore.HexGrid
                     Grid.GetGridObject(x, y).Hide();
                 }
             }
+        }
+
+        private void CreateDebugNodeCosts(float cellSize, int x, int y, Transform debugHexVisuals)
+        {
+            _debugNodeCostArray[x, y].gCost =
+                Utils.CreateWorldText(
+                    "g: 0",
+                    debugHexVisuals,
+                    GetRandomPointInHex(
+                        Grid.GetWorldPosition(x, y),
+                        cellSize / INNER_HEX_CIRCLE_RADIUS_DIVISOR),
+                    Mathf.RoundToInt(cellSize),
+                    Color.black,
+                    TextAlignmentOptions.Center,
+                    0,
+                    Constants.PlayerSortingLayer
+                );
+            _debugNodeCostArray[x, y].hCost =
+                Utils.CreateWorldText(
+                    "h: 0",
+                    debugHexVisuals,
+                    GetRandomPointInHex(
+                        Grid.GetWorldPosition(x, y),
+                        cellSize / INNER_HEX_CIRCLE_RADIUS_DIVISOR),
+                    Mathf.RoundToInt(cellSize),
+                    Color.black,
+                    TextAlignmentOptions.Center,
+                    0,
+                    Constants.PlayerSortingLayer
+                );
+            _debugNodeCostArray[x, y].fCost =
+                Utils.CreateWorldText(
+                    "f: 0",
+                    debugHexVisuals,
+                    GetRandomPointInHex(
+                        Grid.GetWorldPosition(x, y),
+                        cellSize / INNER_HEX_CIRCLE_RADIUS_DIVISOR),
+                    Mathf.RoundToInt(cellSize),
+                    Color.black,
+                    TextAlignmentOptions.Center,
+                    0,
+                    Constants.PlayerSortingLayer
+                );
         }
 
         private SpriteRenderer CreateDebugSquare(float cellSize, int x, int y, Transform parentNode, string squareName)
