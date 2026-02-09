@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using TacticsCore.Data;
 using TacticsCore.Units;
 using UnityEditor;
 using UnityEngine;
@@ -98,25 +99,6 @@ namespace TacticsCore.Editor
 
         public List<Stat> Stats { get; }
 
-    }
-
-    [Serializable]
-    public class Stat
-    {
-        [SerializeField] public StatType type;
-        [SerializeField] public int value;
-        
-        public Stat(StatType type, int value)
-        {
-            this.type = type;
-            this.value = value;
-        }
-    }
-
-    [Serializable]
-    public enum StatType
-    {
-        Initiative
     }
 
     [Serializable]

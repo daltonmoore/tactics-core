@@ -8,6 +8,6 @@ namespace TacticsCore.Interfaces
         public Slider HealthBar { get; }
         public Owner Owner { get; set; }
         
-        public void TakeDamage(int damage);
+        public void TakeDamage(float damage);
     }
 }

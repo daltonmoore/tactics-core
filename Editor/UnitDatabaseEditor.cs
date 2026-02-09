@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using TacticsCore.Data;
 using TacticsCore.Editor;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 namespace Editor
 {

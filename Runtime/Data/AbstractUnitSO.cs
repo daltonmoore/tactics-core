@@ -1,5 +1,4 @@
 ﻿using TacticsCore.HexGrid;
-using TacticsCore.Units;
 using UnityEngine;
 
 namespace TacticsCore.Data
@@ -16,18 +15,7 @@ namespace TacticsCore.Data
         [SerializeField] public int level;
         [SerializeField] public Sprite icon;
         [SerializeField] public bool isLeader;
-        [SerializeField] public int initiative;
         [SerializeField] public Owner owner;
-
-        public virtual void Initialize(string name, int level, Sprite icon, BattleUnitPosition battleUnitPosition,
-            bool isLeader, int initiative)
-        {
-            this.characterName = name;
-            this.level = level;
-            this.icon = icon;
-            this.isLeader = isLeader;
-            this.initiative = initiative;
-        }
 
         public override string ToString()
         {
@@ -35,7 +23,6 @@ namespace TacticsCore.Data
                 $" Name {characterName}" 
                 + $" Lv. {level}"
                 + $" Icon {(icon ? icon.name : " none ")}"
-                + $" Initiative {initiative}"
                 + " Leader " + isLeader;
         }
     }
