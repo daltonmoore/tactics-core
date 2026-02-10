@@ -23,11 +23,11 @@ namespace TacticsCore.Units
     
     public enum BattleUnitPosition
     {
-        BackBottom = 0,     // mod 3 is back to 0
-        BackCenter = 1,     // mod 3 is 1
-        BackTop = 2,         // mod 3 is 2
-        FrontBottom = 3,    // mod 3 is 0
-        FrontCenter = 4,    // mod 3 is 1
-        FrontTop = 5,       // mod 3 is 2
+        BackBottom = 0,
+        BackCenter = 1,
+        BackTop = 2,
+        FrontBottom = 3,
+        FrontCenter = 4,
+        FrontTop = 5,
     }
 }

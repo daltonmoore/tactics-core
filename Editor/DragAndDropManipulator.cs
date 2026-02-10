@@ -9,6 +9,7 @@ namespace TacticsCore.Editor
     public class DragAndDropManipulator : PointerManipulator
     {
         public bool BeganDrag { get; set; }
+        public BattleUnitPosition BattleUnitPosition { get; set; }
         private Vector2 TargetStartPosition { get; set; }
         private Vector3 PointerStartPosition { get; set; }
         private bool Enabled { get; set; }
