@@ -3,34 +3,46 @@ using System.Collections.Generic;
 using TacticsCore.Data;
 using TacticsCore.Editor;
 using UnityEditor;
+using UnityEditor.UIElements;
 using UnityEngine;
+using UnityEngine.UIElements;
+using Random = UnityEngine.Random;
 
 namespace Editor
 {
     [CustomEditor(typeof(UnitDatabase))]
     public class UnitDatabaseEditor : UnityEditor.Editor
     {
+        public override VisualElement CreateInspectorGUI()
+        {
+            VisualElement root = new();
+            Button button = new(InitializeUnitStats)
+            {
+                text = "Init Stats"
+            };
+            
+            MinMaxSlider minMaxSlider = new ("test", 0, 100);
+            root.Add(minMaxSlider);
+
+            InspectorElement.FillDefaultInspector(root, serializedObject, this);
+            root.Add(button);
+            
+            return root;
+        }
+
         private void InitializeUnitStats()
         {
             UnitDatabase unitDatabase = target as UnitDatabase;
 
             foreach (UnitGroup unitGroup in unitDatabase.unitGroups)
             { 
-                Debug.Log($"UnitGroup: {unitGroup.Name}");
                 foreach (Unit unit in unitGroup.units)
                 {
-                    Debug.Log($"Unit: {unit.Name}");
-                    if (unit.Stats == null || unit.Stats.Count == 0)
+                    unit.Stats.Clear();
+
+                    foreach (StatType statType in Enum.GetValues(typeof(StatType)))
                     {
-                        Debug.Log($"Adding stats to unit {unit.Name}");
-                        unit.Stats = new List<Stat>
-                        {
-                            new (StatType.Initiative, 0)
-                        };
-                    }
-                    else
-                    {
-                        Debug.Log($"Unit {unit.Name} already has stats");
+                        unit.Stats.Add(new Stat(statType, Random.Range(20, 100)));
                     }
                 }
             }

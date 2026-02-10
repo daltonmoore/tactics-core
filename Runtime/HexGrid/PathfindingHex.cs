@@ -43,23 +43,23 @@ namespace TacticsCore.HexGrid
 
             Grid.OnGridObjectChanged += (sender, args) =>
             {
-                _debugWalkableArray[args.x, args.y].color = args.gridObject.walkable ? Color.green : Color.red;
-
-                Color GetColor()
-                {
-                    switch (args.gridObject.terrainType)
-                    {
-                        case TerrainType.Forest:
-                            return Color.blue;
-                        case TerrainType.Grass:
-                            return Color.green;
-                        default:
-                            return Color.white;
-                    }
-                }
-
-                _debugTerrainArray[args.x, args.y].color = GetColor();
-
+                // _debugWalkableArray[args.x, args.y].color = args.gridObject.walkable ? Color.green : Color.red;
+                //
+                // Color GetColor()
+                // {
+                //     switch (args.gridObject.terrainType)
+                //     {
+                //         case TerrainType.Forest:
+                //             return Color.blue;
+                //         case TerrainType.Grass:
+                //             return Color.green;
+                //         default:
+                //             return Color.white;
+                //     }
+                // }
+                //
+                // _debugTerrainArray[args.x, args.y].color = GetColor();
+                //
                 // _debugNodeCostArray[args.x, args.y].gCost.text = $"g: {args.gridObject.gCost}";
                 // _debugNodeCostArray[args.x, args.y].hCost.text = $"h: {args.gridObject.hCost}";
                 // _debugNodeCostArray[args.x, args.y].fCost.text = $"f: {args.gridObject.fCost}";
