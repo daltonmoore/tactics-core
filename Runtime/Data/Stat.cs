@@ -8,13 +8,13 @@ namespace TacticsCore.Data
     [Serializable]
     public class Stat
     {
-        [SerializeField] public bool usesRolls;
         [SerializeField] public StatType type;
         [SerializeField] public int value;
 
-        [SerializeField, MinMax(0, 1, ShowEditRange = true)]
+        [SerializeField] public bool dontUseRolls = true;
+        [SerializeField, HideIf("dontUseRolls", true), MinMax(0, 1, ShowEditRange = true)]
         public Vector2 range;
-        
+
         public Stat(StatType type, int value)
         {
             this.type = type;
