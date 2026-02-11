@@ -75,8 +75,6 @@ namespace Editor
                     if (isEditable)
                     {
                         property.vector2Value = new Vector2(vals[1], vals[2]); // save off any change to the value~
-                        minMax.MinLimit = vals[0];
-                        minMax.MaxLimit = vals[3];
                     }
                 }
             }

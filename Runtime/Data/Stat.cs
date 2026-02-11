@@ -9,10 +9,10 @@ namespace TacticsCore.Data
     public class Stat
     {
         [SerializeField] public StatType type;
-        [SerializeField] public int value;
+        [SerializeField, HideIf("useRolls", true)] public int value;
 
-        [SerializeField] public bool dontUseRolls = true;
-        [SerializeField, HideIf("dontUseRolls", true), MinMax(0, 1, ShowEditRange = true)]
+        [SerializeField] public bool useRolls;
+        [SerializeField, HideIf("useRolls", false), MinMax(0, 100, ShowEditRange = true)]
         public Vector2 range;
 
         public Stat(StatType type, int value)

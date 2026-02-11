@@ -20,44 +20,44 @@ MonoBehaviour:
       <Stats>k__BackingField:
       - type: 0
         value: 40
-        dontUseRolls: 1
+        useRolls: 0
         range: {x: 0, y: 0}
       - type: 1
         value: 68
-        dontUseRolls: 1
-        range: {x: 0, y: 0}
+        useRolls: 1
+        range: {x: 10, y: 15}
     - <Name>k__BackingField: Acolyte
       <Icon>k__BackingField: {fileID: -3050702870277809060, guid: aecb201471240464e99c4fcbfeaf73db, type: 3}
       <Stats>k__BackingField:
       - type: 0
         value: 85
-        dontUseRolls: 1
+        useRolls: 0
         range: {x: 0, y: 0}
       - type: 1
-        value: 47
-        dontUseRolls: 1
-        range: {x: 0, y: 0}
+        value: 68
+        useRolls: 1
+        range: {x: 10, y: 15}
     - <Name>k__BackingField: Archer
       <Icon>k__BackingField: {fileID: 5861789324648562600, guid: b7b0051f52e3f2a48992ff9c1e94b4f6, type: 3}
       <Stats>k__BackingField:
       - type: 0
         value: 81
-        dontUseRolls: 1
+        useRolls: 0
         range: {x: 0, y: 0}
       - type: 1
-        value: 69
-        dontUseRolls: 1
-        range: {x: 0, y: 0}
+        value: 68
+        useRolls: 1
+        range: {x: 10, y: 15}
     - <Name>k__BackingField: Healer
       <Icon>k__BackingField: {fileID: 3641027047500068485, guid: 0b64c4f3bcf80b0499f2e89e41621952, type: 3}
       <Stats>k__BackingField:
       - type: 0
         value: 74
-        dontUseRolls: 1
+        useRolls: 0
         range: {x: 0, y: 0}
       - type: 1
-        value: 21
-        dontUseRolls: 1
+        value: 0
+        useRolls: 0
         range: {x: 0, y: 0}
   - <Name>k__BackingField: Undead
     units:
@@ -66,42 +66,42 @@ MonoBehaviour:
       <Stats>k__BackingField:
       - type: 0
         value: 47
-        dontUseRolls: 1
+        useRolls: 0
         range: {x: 0, y: 0}
       - type: 1
-        value: 48
-        dontUseRolls: 1
-        range: {x: 0, y: 0}
+        value: 68
+        useRolls: 1
+        range: {x: 10, y: 15}
     - <Name>k__BackingField: Acolyte
       <Icon>k__BackingField: {fileID: -1573906884554247561, guid: d59cbea3f6811f446b15162bfec6d23b, type: 3}
       <Stats>k__BackingField:
       - type: 0
         value: 63
-        dontUseRolls: 1
+        useRolls: 0
         range: {x: 0, y: 0}
       - type: 1
-        value: 80
-        dontUseRolls: 1
-        range: {x: 0, y: 0}
+        value: 68
+        useRolls: 1
+        range: {x: 10, y: 15}
     - <Name>k__BackingField: Archer
       <Icon>k__BackingField: {fileID: 8012177053804024785, guid: 18464a621460fa84498d2e4fa37af756, type: 3}
       <Stats>k__BackingField:
       - type: 0
         value: 65
-        dontUseRolls: 1
+        useRolls: 0
         range: {x: 0, y: 0}
       - type: 1
-        value: 43
-        dontUseRolls: 1
-        range: {x: 0, y: 0}
+        value: 68
+        useRolls: 1
+        range: {x: 10, y: 15}
     - <Name>k__BackingField: Healer
       <Icon>k__BackingField: {fileID: 2986327879511965546, guid: c8e52d63718e6fe418860eaf0c2ca2db, type: 3}
       <Stats>k__BackingField:
       - type: 0
         value: 31
-        dontUseRolls: 1
+        useRolls: 0
         range: {x: 0, y: 0}
       - type: 1
-        value: 54
-        dontUseRolls: 1
+        value: 0
+        useRolls: 0
         range: {x: 0, y: 0}

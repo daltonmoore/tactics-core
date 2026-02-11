@@ -4,8 +4,8 @@ namespace PropertyAttributes
 {
     public class MinMaxAttribute : PropertyAttribute
     {
-        public float MinLimit = 0;
-        public float MaxLimit = 1;
+        public float MinLimit;
+        public float MaxLimit;
         public bool ShowEditRange;
         public bool ShowDebugValues;
         
