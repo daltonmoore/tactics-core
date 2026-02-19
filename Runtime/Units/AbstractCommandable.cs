@@ -10,7 +10,6 @@ namespace TacticsCore.Units
         [field: SerializeField] public BaseCommand[] AvailableCommands { get; private set; }
         [field: SerializeField] public Transform Transform { get; private set; }
         [field: SerializeField] public Owner Owner { get; set; }
-        [field: SerializeField] public AbstractUnitSO UnitSO { get; private set; }
 
         [SerializeField] protected GameObject decal;
         [SerializeField] protected bool debug;
