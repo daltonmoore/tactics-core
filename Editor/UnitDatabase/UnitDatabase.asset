@@ -16,7 +16,7 @@ MonoBehaviour:
   - <Name>k__BackingField: Human
     units:
     - <Name>k__BackingField: Soldier
-      <Icon>k__BackingField: {fileID: 6859300915453738199, guid: b7528fe001bae5d4d99a5fbdbc3c7cd9, type: 3}
+      <Icon>k__BackingField: {fileID: 1551514337, guid: b1859ec42f5af0b4b935c1ea6591ae53, type: 3}
       <Stats>k__BackingField:
       - type: 0
         value: 40
@@ -27,7 +27,7 @@ MonoBehaviour:
         useRolls: 1
         range: {x: 10, y: 15}
     - <Name>k__BackingField: Acolyte
-      <Icon>k__BackingField: {fileID: -3050702870277809060, guid: 2edc74db1af1fe94884f65b313e83f04, type: 3}
+      <Icon>k__BackingField: {fileID: 1148827702, guid: 2771ea32bfd361d41972258d332b950e, type: 3}
       <Stats>k__BackingField:
       - type: 0
         value: 85
@@ -38,7 +38,7 @@ MonoBehaviour:
         useRolls: 1
         range: {x: 10, y: 15}
     - <Name>k__BackingField: Archer
-      <Icon>k__BackingField: {fileID: 5861789324648562600, guid: 1b245eb9c5cd2b44baf26e57a7742ba0, type: 3}
+      <Icon>k__BackingField: {fileID: 1245732127, guid: e4e83d0282c97044cb76e681be50db97, type: 3}
       <Stats>k__BackingField:
       - type: 0
         value: 81
@@ -49,7 +49,7 @@ MonoBehaviour:
         useRolls: 1
         range: {x: 10, y: 15}
     - <Name>k__BackingField: Healer
-      <Icon>k__BackingField: {fileID: 3641027047500068485, guid: f6e7c3509748a634cad0cce83cf13b55, type: 3}
+      <Icon>k__BackingField: {fileID: 60413213, guid: b46afe5e6407b144abc62d1472549a7e, type: 3}
       <Stats>k__BackingField:
       - type: 0
         value: 74
@@ -62,7 +62,7 @@ MonoBehaviour:
   - <Name>k__BackingField: Undead
     units:
     - <Name>k__BackingField: Soldier
-      <Icon>k__BackingField: {fileID: 7040412003157388535, guid: 093825987eef01c4ca7f52e8f02761f2, type: 3}
+      <Icon>k__BackingField: {fileID: 1411612822, guid: 2eff9aec7423d4c4f85e5aec6a1c2f39, type: 3}
       <Stats>k__BackingField:
       - type: 0
         value: 47
@@ -73,7 +73,7 @@ MonoBehaviour:
         useRolls: 1
         range: {x: 10, y: 15}
     - <Name>k__BackingField: Acolyte
-      <Icon>k__BackingField: {fileID: -1573906884554247561, guid: ab7d315cc715f1c4eb86aa5c0fcede6b, type: 3}
+      <Icon>k__BackingField: {fileID: -1796759415, guid: 4177cd7bcb675fe47b5b1fcc0d165244, type: 3}
       <Stats>k__BackingField:
       - type: 0
         value: 63
@@ -84,7 +84,7 @@ MonoBehaviour:
         useRolls: 1
         range: {x: 10, y: 15}
     - <Name>k__BackingField: Archer
-      <Icon>k__BackingField: {fileID: 8012177053804024785, guid: f734392641c51114899977d35cb7a6c4, type: 3}
+      <Icon>k__BackingField: {fileID: 940232521, guid: 79d027f59dfbc7b429c4ce7f58320f2b, type: 3}
       <Stats>k__BackingField:
       - type: 0
         value: 65
@@ -95,7 +95,7 @@ MonoBehaviour:
         useRolls: 1
         range: {x: 10, y: 15}
     - <Name>k__BackingField: Healer
-      <Icon>k__BackingField: {fileID: 2986327879511965546, guid: 079916a47452f454ebfe493cf344d2e4, type: 3}
+      <Icon>k__BackingField: {fileID: 630536602, guid: 48fce4f68a2ad7847894a73acb43ae13, type: 3}
       <Stats>k__BackingField:
       - type: 0
         value: 31
