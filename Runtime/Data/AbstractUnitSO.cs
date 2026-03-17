@@ -11,6 +11,7 @@ namespace TacticsCore.Data
         public float Health { get; set; } = 100;
         
 
+        [SerializeField] public string unitId;
         [SerializeField] public string characterName;
         [SerializeField] public int level;
         [SerializeField] public Sprite icon;

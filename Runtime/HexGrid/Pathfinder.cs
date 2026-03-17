@@ -30,7 +30,7 @@ namespace TacticsCore.HexGrid
             Instance = this;
             if (useStrictGridSize)
             {
-                Pathfinding = new PathfindingHex(width, height, cellSize, pfHex, pfFogOfWarHex, showFogOfWar);
+                Pathfinding = new PathfindingHex(width, height, cellSize, pfHex, pfFogOfWarHex, showFogOfWar, null);
             }
             else
             {
@@ -74,7 +74,7 @@ namespace TacticsCore.HexGrid
 
 
                 Pathfinding = new PathfindingHex(bounds.size.x, bounds.size.y, cellSize, pfHex, pfFogOfWarHex,
-                    showFogOfWar);
+                    showFogOfWar, hexTilemap);
 
                 foreach (Vector3 pos in unwalkableTileWorldPositions)
                 {

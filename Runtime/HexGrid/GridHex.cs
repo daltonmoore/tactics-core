@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using DaltonUtils;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 namespace TacticsCore.HexGrid
 {
@@ -32,8 +33,8 @@ namespace TacticsCore.HexGrid
         private Transform _debugObjects;
         private TextMeshPro[,] _debugTextArray;
 
-        public GridHex(int width, int height, float cellSize, Vector3 originPosition,
-            Func<GridHex<TGridObject>, int, int, TGridObject> createGridObject)
+        public GridHex(int width, int height, float cellSize, Vector3 originPosition, Tilemap tilemap,
+            Func<GridHex<TGridObject>, int, int, Tilemap, TGridObject> createGridObject)
         {
             this.width = width;
             this.height = height;
@@ -46,7 +47,7 @@ namespace TacticsCore.HexGrid
             {
                 for (int y = 0; y < _gridArray.GetLength(1); y++)
                 {
-                    _gridArray[x, y] = createGridObject(this, x, y);
+                    _gridArray[x, y] = createGridObject(this, x, y, tilemap);
                 }
             }
 

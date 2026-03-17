@@ -3,6 +3,7 @@ using DaltonUtils;
 using Drawing;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 using Random = UnityEngine.Random;
 
 namespace TacticsCore.HexGrid
@@ -27,14 +28,15 @@ namespace TacticsCore.HexGrid
 
 
         public PathfindingHex(int width, int height, float cellSize, Transform pfHex, Transform pfFogOfWarHex,
-            bool showFogOfWar)
+            bool showFogOfWar, Tilemap tilemap)
         {
             Grid = new GridHex<PathNodeHex>(
                 width,
                 height,
                 cellSize,
                 Vector3.zero,
-                (g, x, y) => new PathNodeHex(g, x, y)
+                tilemap,
+                (g, x, y, t) => new PathNodeHex(g, x, y, t)
             );
             CellSize = cellSize;
 

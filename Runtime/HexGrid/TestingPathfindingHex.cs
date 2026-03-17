@@ -16,7 +16,7 @@ namespace TacticsCore.HexGrid
 
         private void Start()
         {
-            Pathfinding = new PathfindingHex(width, height, cellSize, pfHex, null, true);
+            Pathfinding = new PathfindingHex(width, height, cellSize, pfHex, null, true, null);
         }
 
         private void Update()

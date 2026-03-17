@@ -1,8 +1,10 @@
-﻿using TacticsCore.Data;
+﻿using System;
+using TacticsCore.Data;
 using TacticsCore.EventBus;
 using TacticsCore.Events;
 using TacticsCore.Units;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 namespace TacticsCore.HexGrid
 {
@@ -25,12 +27,25 @@ namespace TacticsCore.HexGrid
         public bool IsOccupied;
         public AbstractUnit Occupant;
 
-        public PathNodeHex(GridHex<PathNodeHex> grid, int x, int y)
+        public PathNodeHex(GridHex<PathNodeHex> grid, int x, int y, Tilemap tilemap)
         {
             _grid = grid;
             this.x = x;
             this.y = y;
-            walkable = true;
+            var tacticsTile = tilemap.GetTile<TacticsTile>(new Vector3Int(x, y, 0));
+            Debug.Log($"Trying to get tile at {x}, {y}");
+            if (tacticsTile is not null)
+            {
+                walkable = true;
+                Debug.Log("Tactics Tile terrain type is: " +
+                          Enum.GetName(typeof(TerrainType), tacticsTile.terrainType));
+                terrainType = tacticsTile.terrainType;
+            }
+            else
+            {
+                Debug.Log($"Tile {x}, {y} is NULL and unwalkable");
+                walkable = false;
+            }
         }
 
         public void CalculateFCost()
@@ -74,7 +89,8 @@ namespace TacticsCore.HexGrid
 
     public enum TerrainType
     {
-        Grass = 1,
-        Forest = 2,
+        Grass = 10,
+        Forest = 20,
+        Water = 30,
     }
 }

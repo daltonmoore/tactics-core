@@ -46,8 +46,8 @@ namespace TacticsCore.HexGrid
             int height = 6;
             float cellSize = 1f;
             Vector3 originPosition = new Vector3(0, 0, 0);
-            _gridHex = new GridHex<GridObject>(width, height, cellSize, originPosition,
-                (g, x, y) => new GridObject(x, y));
+            _gridHex = new GridHex<GridObject>(width, height, cellSize, originPosition, null,
+                (g, x, y, _) => new GridObject(x, y));
 
             for (int x = 0; x < width; x++)
             {
